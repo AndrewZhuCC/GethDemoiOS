@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+- (void)showProgressHUDWithTitle:(NSString *)title detail:(NSString *)detail hideAfterDelay:(NSTimeInterval)delay;
+- (void)showProgressHUDWithTitle:(NSString *)title detail:(NSString *)detail;
+- (void)hideProgressHUDAfterDelay:(NSTimeInterval)delay;
+- (void)hideProgressHUD;
 
 @end
-
