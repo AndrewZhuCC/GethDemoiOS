@@ -14,6 +14,8 @@
 		4980B0701E542AFB00829C73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4980B06F1E542AFB00829C73 /* Assets.xcassets */; };
 		4980B0731E542AFB00829C73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4980B0711E542AFB00829C73 /* LaunchScreen.storyboard */; };
 		4980B07D1E542DBB00829C73 /* GethClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4980B07C1E542DBB00829C73 /* GethClient.m */; };
+		4980B0801E54307200829C73 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4980B07F1E54307200829C73 /* LoginViewController.m */; };
+		4980B0831E55348100829C73 /* FunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4980B0821E55348100829C73 /* FunctionViewController.m */; };
 		E3B0DE45C03FD15967D92118 /* libPods-GethScroeDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 351E04D70DEDFA97A6B2E0A8 /* libPods-GethScroeDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,10 @@
 		4980B0741E542AFB00829C73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4980B07B1E542DBB00829C73 /* GethClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GethClient.h; path = Network/GethClient.h; sourceTree = "<group>"; };
 		4980B07C1E542DBB00829C73 /* GethClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GethClient.m; path = Network/GethClient.m; sourceTree = "<group>"; };
+		4980B07E1E54307200829C73 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		4980B07F1E54307200829C73 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4980B0811E55348100829C73 /* FunctionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionViewController.h; sourceTree = "<group>"; };
+		4980B0821E55348100829C73 /* FunctionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionViewController.m; sourceTree = "<group>"; };
 		520533580E0A7BACA70C7C0B /* Pods-GethScroeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GethScroeDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GethScroeDemo/Pods-GethScroeDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +87,10 @@
 				4980B0671E542AFB00829C73 /* AppDelegate.m */,
 				4980B0691E542AFB00829C73 /* ViewController.h */,
 				4980B06A1E542AFB00829C73 /* ViewController.m */,
+				4980B07E1E54307200829C73 /* LoginViewController.h */,
+				4980B07F1E54307200829C73 /* LoginViewController.m */,
+				4980B0811E55348100829C73 /* FunctionViewController.h */,
+				4980B0821E55348100829C73 /* FunctionViewController.m */,
 				4980B07A1E542D9300829C73 /* Network */,
 				4980B06C1E542AFB00829C73 /* Main.storyboard */,
 				4980B06F1E542AFB00829C73 /* Assets.xcassets */,
@@ -239,10 +249,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4980B0831E55348100829C73 /* FunctionViewController.m in Sources */,
 				4980B06B1E542AFB00829C73 /* ViewController.m in Sources */,
 				4980B0681E542AFB00829C73 /* AppDelegate.m in Sources */,
 				4980B07D1E542DBB00829C73 /* GethClient.m in Sources */,
 				4980B0651E542AFB00829C73 /* main.m in Sources */,
+				4980B0801E54307200829C73 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +377,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LT4WKW32ZY;
 				INFOPLIST_FILE = GethScroeDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.GethScroeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -379,7 +391,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LT4WKW32ZY;
 				INFOPLIST_FILE = GethScroeDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.GethScroeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
