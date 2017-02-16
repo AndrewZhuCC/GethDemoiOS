@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Andrew. All rights reserved.
 //
 
-#define ServerAddress @"http://"
+#define ServerAddress @"http://172.27.15.183:8080"
 
 #import "GethClient.h"
 
@@ -67,6 +67,41 @@
     return task;
 }
 
+- (nullable NSURLSessionDataTask *)requestRegisterWithUsername:(nonnull NSString *)username
+                                                      password:(nonnull NSString *)password
+                                                       success:(nonnull void (^)(NSURLResponse * _Nonnull response, NSString * _Nonnull userID))success
+                                                          fail:(nonnull void (^)(NSURLResponse * _Nonnull response, id _Nullable responseObject, NSError * _Nullable error))fail {
+    NSDictionary *param = @{
+                            @"username" : username,
+                            @"password" : password,
+                            };
+    return [self requestWithURL:@"register" method:@"POST" parameters:param success:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject) {
+        NSString *userid = [responseObject objectForKey:@"userid"];
+        BOOL bools = [[responseObject objectForKey:@"success"] boolValue];
+        if (bools) {
+            if (userid) {
+                self.userID = userid;
+                if (success) {
+                    success(response, userid);
+                }
+            } else {
+                if (fail) {
+                    fail(response, responseObject, nil);
+                }
+            }
+        } else {
+            if (fail) {
+                fail(response, responseObject, nil);
+            }
+        }
+    } fail:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        if (fail) {
+            fail(response, responseObject, error);
+        }
+    }];
+}
+
+
 - (nullable NSURLSessionDataTask *)requestLoginWithUsername:(nonnull NSString *)username
                                           password:(nonnull NSString *)password
                                            success:(nonnull void (^)(NSURLResponse * _Nonnull response, NSString * _Nonnull userID))success
@@ -101,7 +136,7 @@
                             @"userid" : self.userID,
                             @"cost"   : @(cost),
                             };
-    return [self requestWithURL:@"consume" method:@"PSOT" parameters:param success:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject) {
+    return [self requestWithURL:@"consume" method:@"POST" parameters:param success:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject) {
         BOOL bools = [[responseObject objectForKey:@"success"] boolValue];
         NSString *userid = [responseObject objectForKey:@"userid"];
         if (bools && [userid isEqualToString:self.userID]) {

@@ -1,23 +1,22 @@
 //
-//  LoginViewController.m
+//  RegisterViewController.m
 //  GethScroeDemo
 //
-//  Created by 朱安智 on 2017/2/15.
+//  Created by 朱安智 on 2017/2/16.
 //  Copyright © 2017年 Andrew. All rights reserved.
 //
 
-#import "LoginViewController.h"
-
+#import "RegisterViewController.h"
 #import "GethClient.h"
 
-@interface LoginViewController ()
+@interface RegisterViewController ()
 
 @property (nonatomic, weak) IBOutlet UITextField *tfUsername;
 @property (nonatomic, weak) IBOutlet UITextField *tfPassword;
 
 @end
 
-@implementation LoginViewController
+@implementation RegisterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,7 +28,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)loginButtonClicked:(id)sender {
+- (IBAction)registerButtonTapped:(id)sender {
     if (self.tfUsername.text.length == 0) {
         [self showProgressHUDWithTitle:@"Username" detail:@"Empty Username" hideAfterDelay:3.f];
         return;
@@ -40,7 +39,7 @@
     }
     [self showProgressHUDWithTitle:nil detail:nil];
     
-    [GethClientInstance requestLoginWithUsername:self.tfUsername.text password:self.tfPassword.text success:^(NSURLResponse * _Nonnull response, NSString * _Nonnull userID) {
+    [GethClientInstance requestRegisterWithUsername:self.tfUsername.text password:self.tfPassword.text success:^(NSURLResponse * _Nonnull response, NSString * _Nonnull userID) {
         [self hideProgressHUD];
         [self performSegueWithIdentifier:@"showFunction" sender:self];
     } fail:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {

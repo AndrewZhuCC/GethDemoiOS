@@ -20,7 +20,6 @@
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1f2-LO-HuY"/>
-                        <segue destination="buO-UU-aiv" kind="show" identifier="showFunction" id="ced-3m-BLU"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XyT-uX-BOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -64,17 +63,34 @@
                                     <action selector="loginButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0sS-Rw-Mqd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axg-o7-Obu">
+                                <rect key="frame" x="87" y="427" width="200" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="crR-aO-ioI"/>
+                                </constraints>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="SUw-Ve-nAI" kind="show" id="wdW-XG-lkx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bbt-HJ-ZvI" firstAttribute="top" secondItem="ZmL-ti-E15" secondAttribute="bottom" constant="20" id="CPf-1a-4kE"/>
+                            <constraint firstItem="Axg-o7-Obu" firstAttribute="height" secondItem="Vsh-KJ-nV6" secondAttribute="height" id="FdH-k7-53I"/>
                             <constraint firstItem="bbt-HJ-ZvI" firstAttribute="leading" secondItem="ZmL-ti-E15" secondAttribute="leading" id="NJ8-cz-eaS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZmL-ti-E15" secondAttribute="trailing" constant="20" id="Ops-Ag-eTf"/>
                             <constraint firstItem="Vsh-KJ-nV6" firstAttribute="top" secondItem="bbt-HJ-ZvI" secondAttribute="bottom" constant="119" id="UlW-5k-naf"/>
+                            <constraint firstItem="Axg-o7-Obu" firstAttribute="centerX" secondItem="Vsh-KJ-nV6" secondAttribute="centerX" id="W5T-XV-uzh"/>
                             <constraint firstItem="bbt-HJ-ZvI" firstAttribute="trailing" secondItem="ZmL-ti-E15" secondAttribute="trailing" id="XgH-6V-E6h"/>
+                            <constraint firstItem="Axg-o7-Obu" firstAttribute="top" secondItem="Vsh-KJ-nV6" secondAttribute="bottom" constant="34" id="YPc-if-69w"/>
                             <constraint firstItem="ZmL-ti-E15" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="h5i-2t-VFe"/>
                             <constraint firstItem="Vsh-KJ-nV6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lbF-iT-e10"/>
                             <constraint firstItem="bbt-HJ-ZvI" firstAttribute="height" secondItem="ZmL-ti-E15" secondAttribute="height" id="pQD-tG-Ja8"/>
+                            <constraint firstItem="Axg-o7-Obu" firstAttribute="width" secondItem="Vsh-KJ-nV6" secondAttribute="width" id="qL3-Gv-w4f"/>
                             <constraint firstItem="ZmL-ti-E15" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="qf7-Yz-dsX"/>
                         </constraints>
                     </view>
@@ -82,11 +98,12 @@
                     <connections>
                         <outlet property="tfPassword" destination="bbt-HJ-ZvI" id="TPl-2f-8Mh"/>
                         <outlet property="tfUsername" destination="ZmL-ti-E15" id="aSx-JS-omt"/>
+                        <segue destination="buO-UU-aiv" kind="show" identifier="showFunction" id="5We-d5-2d7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="362" y="468"/>
+            <point key="canvasLocation" x="401" y="335"/>
         </scene>
         <!--Function View Controller-->
         <scene sceneID="Xpu-Oi-i6U">
@@ -307,7 +324,72 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rR-FQ-9yd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1199" y="54"/>
+            <point key="canvasLocation" x="1822" y="54"/>
+        </scene>
+        <!--Register-->
+        <scene sceneID="Skz-5w-cYt">
+            <objects>
+                <viewController title="Register" id="SUw-Ve-nAI" customClass="RegisterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sXD-gU-MVx"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zl1-qZ-vnl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9s2-gx-QE9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gYn-yP-ITk">
+                                <rect key="frame" x="36" y="120" width="303" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AYN-tQ-DAV">
+                                <rect key="frame" x="36" y="170" width="303" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dil-En-Q8j">
+                                <rect key="frame" x="87" y="319" width="200" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="a1l-x0-vz4"/>
+                                </constraints>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="SUw-Ve-nAI" eventType="touchUpInside" id="Bdg-hT-oOW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dil-En-Q8j" firstAttribute="top" secondItem="AYN-tQ-DAV" secondAttribute="bottom" constant="119" id="58y-tf-NNO"/>
+                            <constraint firstItem="dil-En-Q8j" firstAttribute="centerX" secondItem="9s2-gx-QE9" secondAttribute="centerX" id="BS6-NL-gVu"/>
+                            <constraint firstItem="AYN-tQ-DAV" firstAttribute="trailing" secondItem="gYn-yP-ITk" secondAttribute="trailing" id="IqC-FU-3sN"/>
+                            <constraint firstItem="AYN-tQ-DAV" firstAttribute="leading" secondItem="gYn-yP-ITk" secondAttribute="leading" id="N0q-UD-GPr"/>
+                            <constraint firstItem="AYN-tQ-DAV" firstAttribute="top" secondItem="gYn-yP-ITk" secondAttribute="bottom" constant="20" id="awt-yK-uUu"/>
+                            <constraint firstItem="gYn-yP-ITk" firstAttribute="leading" secondItem="9s2-gx-QE9" secondAttribute="leadingMargin" constant="20" id="gzO-Ky-Kab"/>
+                            <constraint firstItem="AYN-tQ-DAV" firstAttribute="height" secondItem="gYn-yP-ITk" secondAttribute="height" id="ju2-as-KfI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gYn-yP-ITk" secondAttribute="trailing" constant="20" id="nnA-00-dbl"/>
+                            <constraint firstItem="gYn-yP-ITk" firstAttribute="top" secondItem="sXD-gU-MVx" secondAttribute="bottom" constant="100" id="q6F-zI-WuA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jbv-qE-Xba"/>
+                    <connections>
+                        <outlet property="tfPassword" destination="AYN-tQ-DAV" id="n4b-0y-hwp"/>
+                        <outlet property="tfUsername" destination="gYn-yP-ITk" id="bk0-ih-21F"/>
+                        <segue destination="buO-UU-aiv" kind="show" identifier="showFunction" id="v1z-f2-DAv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1RW-22-Nmn" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1114" y="673"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="v1z-f2-DAv"/>
+    </inferredMetricsTieBreakers>
 </document>

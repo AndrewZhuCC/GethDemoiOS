@@ -16,6 +16,7 @@
 		4980B07D1E542DBB00829C73 /* GethClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4980B07C1E542DBB00829C73 /* GethClient.m */; };
 		4980B0801E54307200829C73 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4980B07F1E54307200829C73 /* LoginViewController.m */; };
 		4980B0831E55348100829C73 /* FunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4980B0821E55348100829C73 /* FunctionViewController.m */; };
+		4980B0861E556C1300829C73 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4980B0851E556C1300829C73 /* RegisterViewController.m */; };
 		E3B0DE45C03FD15967D92118 /* libPods-GethScroeDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 351E04D70DEDFA97A6B2E0A8 /* libPods-GethScroeDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,8 @@
 		4980B07F1E54307200829C73 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4980B0811E55348100829C73 /* FunctionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionViewController.h; sourceTree = "<group>"; };
 		4980B0821E55348100829C73 /* FunctionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionViewController.m; sourceTree = "<group>"; };
+		4980B0841E556C1300829C73 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		4980B0851E556C1300829C73 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		520533580E0A7BACA70C7C0B /* Pods-GethScroeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GethScroeDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GethScroeDemo/Pods-GethScroeDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +92,8 @@
 				4980B06A1E542AFB00829C73 /* ViewController.m */,
 				4980B07E1E54307200829C73 /* LoginViewController.h */,
 				4980B07F1E54307200829C73 /* LoginViewController.m */,
+				4980B0841E556C1300829C73 /* RegisterViewController.h */,
+				4980B0851E556C1300829C73 /* RegisterViewController.m */,
 				4980B0811E55348100829C73 /* FunctionViewController.h */,
 				4980B0821E55348100829C73 /* FunctionViewController.m */,
 				4980B07A1E542D9300829C73 /* Network */,
@@ -253,6 +258,7 @@
 				4980B06B1E542AFB00829C73 /* ViewController.m in Sources */,
 				4980B0681E542AFB00829C73 /* AppDelegate.m in Sources */,
 				4980B07D1E542DBB00829C73 /* GethClient.m in Sources */,
+				4980B0861E556C1300829C73 /* RegisterViewController.m in Sources */,
 				4980B0651E542AFB00829C73 /* main.m in Sources */,
 				4980B0801E54307200829C73 /* LoginViewController.m in Sources */,
 			);

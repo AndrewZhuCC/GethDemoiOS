@@ -45,7 +45,7 @@
     
     [self showProgressHUDWithTitle:nil detail:nil];
     [GethClientInstance requestConsumeWithCost:cost success:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject) {
-        [self showProgressHUDWithTitle:@"消费成功" detail:[NSString stringWithFormat:@"消费 %@ 元", @(cost)] hideAfterDelay:5.f];
+        [self showProgressHUDWithTitle:@"消费成功" detail:[NSString stringWithFormat:@"消费 %@ 元", @(cost)] hideAfterDelay:3.f];
     } fail:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         [self showProgressHUDWithTitle:@"消费失败" detail:[NSString stringWithFormat:@"obj:%@ error:%@", responseObject, error.localizedDescription] hideAfterDelay:5.f];
     }];
@@ -60,7 +60,7 @@
     
     [self showProgressHUDWithTitle:nil detail:nil];
     [GethClientInstance requestUseScoreWithCost:cost success:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject) {
-        [self showProgressHUDWithTitle:@"消费积分成功" detail:[NSString stringWithFormat:@"消费积分 %@", @(cost)] hideAfterDelay:5.f];
+        [self showProgressHUDWithTitle:@"消费积分成功" detail:[NSString stringWithFormat:@"消费积分 %@", @(cost)] hideAfterDelay:3.f];
     } fail:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         [self showProgressHUDWithTitle:@"消费积分失败" detail:[NSString stringWithFormat:@"obj:%@ error:%@", responseObject, error] hideAfterDelay:5.f];
     }];

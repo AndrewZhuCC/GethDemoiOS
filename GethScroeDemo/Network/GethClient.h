@@ -14,6 +14,11 @@
 
 + (nonnull GethClient *)instance;
 
+- (nullable NSURLSessionDataTask *)requestRegisterWithUsername:(nonnull NSString *)username
+                                                      password:(nonnull NSString *)password
+                                                       success:(nonnull void (^)(NSURLResponse * _Nonnull response, NSString * _Nonnull userID))success
+                                                          fail:(nonnull void (^)(NSURLResponse * _Nonnull response, id _Nullable responseObject, NSError * _Nullable error))fail;
+
 - (nullable NSURLSessionDataTask *)requestLoginWithUsername:(nonnull NSString *)username
                                                    password:(nonnull NSString *)password
                                                     success:(nonnull void (^)(NSURLResponse * _Nonnull response, NSString * _Nonnull userID))success
